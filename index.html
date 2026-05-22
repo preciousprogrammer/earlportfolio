@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+		html{
+			scroll-behavior: smooth;
+		}
+		body{
+			background: #007EFF;
+		}
+		.nav{
+			padding: 20px 30px;
+			background: #88BDF2;
+			border-bottom: 2px solid #ccc;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		span{
+			cursor: pointer;
+			text-decoration: none;
+			color: #333;
+			display: inline-block;
+			padding: 8px 12px;
+		}
+		span:hover{
+			color: #fff;
+			background-color: #333;
+			border-radius: 4px;
+		}
+		.logo{
+			float: right;
+		}
+		.message{
+			padding: 40px 30px;
+			background: #333;
+			color:#fff ;
+		}
+		.message h2{
+			margin-bottom: 20px;
+			font-size: 30px;
+		}
+		.message p{
+			line-height: 25px;
+			padding: 15px 15px;
+			border-radius:16px;
+			background: #6A89A7;
+			width: 70%;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.message button{
+			background: #fff;
+			color: #333;
+			padding: 15px 20px;
+			border-radius: 10px;
+			font-size: 16px;
+			margin-top: 15px;
+			border: 1px solid #333;
+			transition: 0.5s;
+			font-weight: bold;
+		}
+		.message button:hover{
+			color: #333;
+			cursor: pointer;
+			background-color: #82C8E5;
+		}
+		.nav_bar{
+			position: fixed;
+			display: none;
+			z-index: 9999;
+			top: 85px;
+			left: -250px;
+			width:250px;
+			height: 100vh;
+			overflow: auto;
+			background: #6A89A7;
+			padding: 30px 50px;
+			animation: sideIn 0.5s ease forwards;
+		}
+		.nav_bar{
+			left: 0;
+		}
+		.nav_bar i{
+			color: #FFFFE3;
+			text-decoration: none;
+			display: block;
+			padding: 20px 25px;
+		}
+		.nav_bar i:hover{
+			color: #fff;
+			transition: 5s ease-in out;
+			cursor: pointer;
+			border: 1px solid #fff;
+		}
+		@keyframes sideIn{
+			from{
+				transform: translate X(100%);
+			}
+			to{
+				transform: translate X(0);
+			}
+		}
+		.image{
+			width: 100%;
+			height: 350px;
+			object-fit: cover;
+			border-radius: 15px;
+		}
+		.image:hover{
+			transform: translateY(-20px);
+			transition: 1s linear;
+			opacity: 9;
+		}
+		.featured{
+			background-color:#BDDDFC;
+			margin: 10px 0;
+		}
+		.featured h3{
+			color: #333;
+			padding: 20px 30px;
+			font-size: 35px;
+			text-shadow:2px 2px 2px white;
+
+		}
+		.parent{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+			gap: 5px;
+		}
+		.child{
+			padding: 5px 30px;
+		}
+		.child h4{
+			color: #344;
+			padding: 10px 0;
+			font-size: 30px;
+		}
+		.child p{
+			line-height: 25px;
+			font-family: cursive;
+		}
+
+		
+		
+	</style>
+</head>
+<body>
+	<nav class="nav">
+		<span onclick="toggle_pop()">&#9776;</span>
+			<span class="logo">LOGO
+			</span>
+		</nav>
+		<center>
+		<div class="message">
+			<h2>HELLO! Welcome to my portfolio</h2>
+			<p>I am zorex a web developer and a forex trader. I build modern websites and navigating the forex market.</p>
+		<button>view my work</button>
+	</div>
+</center>
+
+	<div class="nav_bar" id="nav_bar">
+		<i class="fa fa-home">&nbsp;HOME</i>
+		<i class="fa fa-gear">&nbsp;SETTINGS</i>
+		<i class="fa fa-envelope">&nbsp;CONTACT</i>
+		<i class="fa fa-user">&nbsp;USER</i>
+		<i class="fa fa-power-off">&nbsp;SIGNOUT</i>
+	</div>
+	<div class="featured">
+	<h3>Featured Project</h3>
+	<div class="parent">
+	<div class="child">
+		<img src="11.png" alt="trading page" class="image">
+		<h4>Broker's page</h4>
+		<p>A responsive broker webpage created to showcase financial services, market insights and user-friendly navigation</p></div>
+	<div class="child">
+		<img src="12.png" alt="booking page" class="image">
+		<h4>Booking page</h4>
+		<p>This project desmonstrate my ability to create responsive and interactive web interface with functional booking features and modern UI designs</p>
+	</div>
+	<div class="child">
+		<img src="13.png" alt="library page" class="image">
+		<h4>Library page</h4>
+		<p>This page serves as a modern, high-end digital hub for a corporate or metropolitan institution, designed to blend traditional academic utility with contemporary user experience.</p>
+	</div>
+</div>
+</div>
+<div class="about">
+	<h3>About me</h3>
+	<div 
+
+<script>
+let nav_bar = document.getElementById("nav_bar");
+function toggle_pop(){
+if(nav_bar.style.display==="none"){
+	nav_bar.style.display = "block";
+}else{
+	nav_bar.style.display = "none";
+	}
+}
+</script>
+</body>
+</html>

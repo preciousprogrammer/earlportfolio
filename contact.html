@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+		.nav{
+			padding: 20px 30px;
+			background: #88BDF2;
+			border-bottom: 2px solid #ccc;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		span{
+			cursor: pointer;
+		}
+		span a{
+			text-decoration: none;
+			color: #333;
+			display: inline-block;
+			padding: 8px 12px;
+		}
+		span a:hover{
+			color: #fff;
+			background-color: #333;
+			border-radius: 4px;
+		}
+		.logo{
+			float: right;
+		}
+		.message{
+			padding: 40px 30px;
+			background: #333;
+			color:#fff ;
+		}
+		.message h2{
+			margin-bottom: 20px;
+			font-size: 30px;
+		}
+		.message p{
+			line-height: 25px;
+			padding: 20px 0;
+			border-radius:10px;
+			background: #6A89A7;
+			width: 60%;
+			color: #fff;
+		}
+		.message button{
+			background: #fff;
+			color: #333;
+			padding: 14px 10px;
+			border-radius: 10px;
+			font-size: 15px;
+			margin-top: 15px;
+			border: none;
+		}
+		.message button:hover{
+			color: #333;
+		}
+		.nav_bar{
+			position: absolute;
+			top: 85px;
+			left: -250px;
+			width:250px;
+			height: 100vh;
+			overflow: auto;
+			background: #6A89A7;
+			padding: 30px 50px;
+			animation: sideIn 0.5s ease forwards;
+		}
+		.nav_bar{
+			left: 0;
+		}
+		.nav_bar i{
+			color: #FFFFE3;
+			text-decoration: none;
+			display: block;
+			padding: 20px 25px;
+		}
+		.nav_bar i:hover{
+			color: #fff;
+			transition: 5s ease-in out;
+			cursor: pointer;
+			border: 1px solid #fff;
+		}
+		@keyframes sideIn{
+			from{
+				transform: translate X(100%);
+			}
+			to{
+				transform: translate X(0);
+			}
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<nav class="nav">
+		<span onclick="toggle_pop()"><a href="#">&#9776;</a></span>
+			<span class="logo">LOGO
+			</span>
+		</nav>
+		<center>
+		<div class="message">
+			<h2>HELLO! Welcome to my portfolio</h2>
+			<p>I am zorex a web developer and a forex trader. I build modern websites and navigating the forex market.</p>
+		<button>view my work</button>
+	</div>
+</center>
+
+	<div class="nav_bar" id="popup">
+		<i class="fa fa-home">&nbsp;HOME</i>
+		<i class="fa fa-gear">&nbsp;SETTINGS</i>
+		<i class="fa fa-envelope">&nbsp;CONTACT</i>
+		<i class="fa fa-user">&nbsp;USER</i>
+		<i class="fa fa-power-off">&nbsp;SIGNOUT</i>
+	</div>
+<script>
+let popup = document.getElementById("popup");
+function toggle_pop(){
+if(popup.style.display==="block"){
+	popup.style.display = "none";
+}else{
+	popup.style.display = "block";
+	}
+}
+</script>
+</body>
+</html>
